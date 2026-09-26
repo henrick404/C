@@ -38,11 +38,24 @@ void troca(int *numA, int *numB){
 
 }
 
+void negativa(int *arr, int tamanho){
+    for (int i=0; i< tamanho; i++){
+        if (arr[i] > 0){
+            arr[i] -= 2*arr[i];
+        };
+    }
+}
 
 void main(){
-    int a = 6;
-    int b = 8;
-    troca(&a,&b);
-    printf("%d, %d", a,b);
-   
+    // int a = 6;
+    // int b = 8;
+    // troca(&a,&b);
+    // printf("%d, %d", a,b);
+    int numeros[5];
+    for (int i = 0; i<5;i++){
+        scanf("%d",&numeros[i]);
+    }
+    negativa(&numeros[0], 5);
+    for (int i = 0; i<5; i++)
+        printf("%d, ", numeros[i]);
 }
